@@ -72,9 +72,7 @@ region your account lives in.
 
 ```python
 CryptaScreen(api_key="csk_eu_...")  # served by the EU region
-CryptaScreen(
-    api_key="csk_...", base_url="http://localhost:8081"
-)  # optional: for example a proxy
+CryptaScreen(api_key="csk_...", base_url="http://localhost:8081")  # optional: for example a proxy
 ```
 
 ## API Reference
