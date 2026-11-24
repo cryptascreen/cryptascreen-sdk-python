@@ -4,13 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "cryptascreen"
-version = "0.2.2"
+version = "0.2.3"
 description = "Official Python SDK for the CryptaScreen API — address and name screening, sanctions, exposure, investigations"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
-authors = [{ name = "CryptaCount, Inc.", email = "support@cryptacount.com" }]
-maintainers = [{ name = "CryptaCount, Inc.", email = "support@cryptacount.com" }]
+authors = [{ name = "CryptaCount, Inc." }]
+maintainers = [{ name = "CryptaCount, Inc." }]
 keywords = ["cryptascreen", "compliance", "screening", "sanctions", "crypto", "aml", "kyc"]
 classifiers = [
     "Development Status :: 3 - Alpha",
