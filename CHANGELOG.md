@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.4
+
+- Re-release of 0.2.3 under a new version number (0.2.3 was removed from PyPI and its number cannot be reused). No code, API or metadata change.
+
 ## 0.2.3
 
 - Package metadata: author and maintainer are CryptaCount, Inc. with no e-mail address. No code or API change; same behaviour as 0.2.2.
