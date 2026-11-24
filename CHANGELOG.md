@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- CI and release workflow actions: checkout 7, setup-python 7, upload-artifact 7, download-artifact 8. No code or API change; same behaviour as 0.2.1.
+
 ## 0.2.1
 
 - Package metadata: author and maintainer are CryptaCount, Inc. (the copyright and licence holder, as in LICENSE). No code or API change.
