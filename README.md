@@ -5,7 +5,7 @@ Official Python SDK for the [CryptaScreen API](https://github.com/cryptascreen/c
 [![Python 3.10-3.13](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Same API surface as [`@cryptascreen/sdk`](https://github.com/cryptascreen/cryptascreen-sdk-typescript) 0.2.2 (every method maps 1:1; `cryptascreen.operations.OPERATIONS` lists each one with its HTTP method and path).
+Same API surface as the [TypeScript SDK](https://github.com/cryptascreen/cryptascreen-sdk-typescript) (`cryptascreen.operations.OPERATIONS` lists each one with its HTTP method and path).
 
 ## Installation
 
@@ -21,8 +21,6 @@ With optional extras:
 pip install cryptascreen[async]    # HTTP/2 support for the async client
 pip install cryptascreen[dev]      # Development tools (pytest, mypy, ruff, respx)
 ```
-
-> Not published yet: until the first release, install from a local checkout (`pip install -e .`).
 
 ## Quick Start
 
@@ -76,7 +74,7 @@ region your account lives in.
 CryptaScreen(api_key="csk_eu_...")  # served by the EU region
 CryptaScreen(
     api_key="csk_...", base_url="http://localhost:8081"
-)  # explicit URL (a local stack or a proxy)
+)  # optional: for example a proxy
 ```
 
 ## API Reference
@@ -265,12 +263,9 @@ pip install -e ".[dev]"
 ruff check src/ tests/
 ruff format --check src/ tests/
 mypy src/cryptascreen/ --ignore-missing-imports
-pytest -v                      # unit + API parity (contract tests are skipped without a local stack)
+pytest -v
 python -m build                # sdist + wheel
 ```
-
-Contract tests (`tests/contract/`) run against a LOCAL CryptaScreen stack only (`CS_CONTRACT_US`, `CS_CONTRACT_EU`, `CS_CONTRACT_KEY_US`,
-`CS_CONTRACT_KEY_EU`, `CS_CONTRACT_KEY_RL`); never against production.
 
 ## License
 
