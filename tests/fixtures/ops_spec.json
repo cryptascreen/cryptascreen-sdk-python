@@ -1,0 +1,724 @@
+{
+ "screening": [
+  {
+   "ts": "screenAddress",
+   "http": "POST",
+   "path": "/screen/address",
+   "p": [],
+   "body": "ScreenAddressRequest",
+   "ret": "ScreeningResponse"
+  },
+  {
+   "ts": "screenBulk",
+   "http": "POST",
+   "path": "/screen/bulk",
+   "p": [],
+   "body": "BulkScreeningRequest",
+   "ret": "List[ScreeningResponse]",
+   "custom": "bulk_sync"
+  },
+  {
+   "ts": "screenBulkAsync",
+   "http": "POST",
+   "path": "/screen/bulk",
+   "p": [],
+   "body": "BulkScreeningRequest",
+   "ret": "ScreeningJob",
+   "custom": "bulk_async"
+  },
+  {
+   "ts": "pollJob",
+   "http": "GET",
+   "path": "/screen/jobs/{jobId}",
+   "p": [
+    "jobId"
+   ],
+   "ret": "ScreeningJob"
+  },
+  {
+   "ts": "listJobs",
+   "http": "GET",
+   "path": "/screen/jobs",
+   "p": [],
+   "ret": "List[ScreeningJob]"
+  },
+  {
+   "ts": "getJobResults",
+   "http": "GET",
+   "path": "/screen/jobs/{jobId}/results",
+   "p": [
+    "jobId"
+   ],
+   "q": [
+    [
+     "page",
+     "int",
+     0
+    ],
+    [
+     "size",
+     "int",
+     100
+    ]
+   ],
+   "ret": "ScreeningJobResultsPage",
+   "custom": "job_results"
+  },
+  {
+   "ts": "cancelJob",
+   "http": "POST",
+   "path": "/screen/jobs/{jobId}/cancel",
+   "p": [
+    "jobId"
+   ],
+   "ret": "ScreeningJob"
+  },
+  {
+   "ts": "getHistory",
+   "http": "GET",
+   "path": "/screen/address/{chain}/{address}/history",
+   "p": [
+    "chain",
+    "address"
+   ],
+   "ret": "ScreeningResponse"
+  },
+  {
+   "ts": "listEvaluations",
+   "http": "GET",
+   "path": "/screen/address/{chain}/{address}/evaluations",
+   "p": [
+    "chain",
+    "address"
+   ],
+   "q": [
+    [
+     "page",
+     "int",
+     0
+    ],
+    [
+     "size",
+     "int",
+     20
+    ]
+   ],
+   "ret": "ScreeningEvaluationPage"
+  },
+  {
+   "ts": "getCounterparties",
+   "http": "GET",
+   "path": "/screen/address/{chain}/{address}/counterparties",
+   "p": [
+    "chain",
+    "address"
+   ],
+   "q": [
+    [
+     "page",
+     "int",
+     null
+    ],
+    [
+     "size",
+     "int",
+     null
+    ],
+    [
+     "sort",
+     "str",
+     null
+    ],
+    [
+     "order",
+     "str",
+     null
+    ],
+    [
+     "days",
+     "int",
+     null
+    ],
+    [
+     "direction",
+     "str",
+     null
+    ],
+    [
+     "listedOnly",
+     "bool",
+     null
+    ]
+   ],
+   "ret": "WalletCounterpartyPage"
+  },
+  {
+   "ts": "getTransactions",
+   "http": "GET",
+   "path": "/screen/address/{chain}/{address}/transactions",
+   "p": [
+    "chain",
+    "address"
+   ],
+   "q": [
+    [
+     "page",
+     "int",
+     null
+    ],
+    [
+     "size",
+     "int",
+     null
+    ],
+    [
+     "sort",
+     "str",
+     null
+    ],
+    [
+     "order",
+     "str",
+     null
+    ],
+    [
+     "days",
+     "int",
+     null
+    ],
+    [
+     "direction",
+     "str",
+     null
+    ],
+    [
+     "counterparty",
+     "str",
+     null
+    ]
+   ],
+   "ret": "WalletTransactionPage"
+  },
+  {
+   "ts": "getExposurePaths",
+   "http": "GET",
+   "path": "/screen/address/{chain}/{address}/exposure-paths",
+   "p": [
+    "chain",
+    "address"
+   ],
+   "q": [
+    [
+     "days",
+     "int",
+     null
+    ]
+   ],
+   "ret": "WalletExposurePaths"
+  },
+  {
+   "ts": "getEvaluation",
+   "http": "GET",
+   "path": "/screen/evaluations/{evaluationId}",
+   "p": [
+    "evaluationId"
+   ],
+   "ret": "ScreeningEvaluation"
+  },
+  {
+   "ts": "screenBulkAndWait",
+   "http": null,
+   "path": null,
+   "p": [],
+   "body": "BulkScreeningRequest",
+   "ret": "ScreeningJob",
+   "custom": "bulk_wait"
+  }
+ ],
+ "sanctions": [
+  {
+   "ts": "check",
+   "http": "GET",
+   "path": "/sanctions/check/{chain}/{address}",
+   "p": [
+    "chain",
+    "address"
+   ],
+   "ret": "SanctionsCheckResponse"
+  },
+  {
+   "ts": "getStatus",
+   "http": "GET",
+   "path": "/sanctions/status",
+   "p": [],
+   "ret": "SanctionsStatusResponse"
+  }
+ ],
+ "names": [
+  {
+   "ts": "screen",
+   "http": "POST",
+   "path": "/screen/name",
+   "p": [],
+   "body": "NameScreenRequest",
+   "ret": "NameScreenResponse",
+   "custom": "name_screen"
+  },
+  {
+   "ts": "get",
+   "http": "GET",
+   "path": "/screen/name/{screeningId}",
+   "p": [
+    "screeningId"
+   ],
+   "ret": "NameScreenResponse"
+  },
+  {
+   "ts": "history",
+   "http": "GET",
+   "path": "/screen/name/history",
+   "p": [],
+   "q": [
+    [
+     "limit",
+     "int",
+     50
+    ]
+   ],
+   "ret": "List[NameScreeningHistoryItem]"
+  },
+  {
+   "ts": "decide",
+   "http": "POST",
+   "path": "/screen/name/decisions",
+   "p": [],
+   "body": "NameDecisionRequest",
+   "ret": "NameMatchDecision"
+  },
+  {
+   "ts": "decisionAudit",
+   "http": "GET",
+   "path": "/screen/name/decisions/audit",
+   "p": [],
+   "q": [
+    [
+     "format",
+     "str",
+     "json"
+    ]
+   ],
+   "ret": "Any"
+  }
+ ],
+ "graph": [
+  {
+   "ts": "buildGraph",
+   "http": "POST",
+   "path": "/investigate/graph",
+   "p": [],
+   "body": "GraphRequest",
+   "ret": "GraphResponse"
+  },
+  {
+   "ts": "exportGraph",
+   "http": "POST",
+   "path": "/investigate/graph/export",
+   "p": [],
+   "body": "GraphRequest",
+   "q": [
+    [
+     "format",
+     "str",
+     "json"
+    ]
+   ],
+   "ret": "Any",
+   "custom": "graph_export"
+  },
+  {
+   "ts": "trace",
+   "http": "POST",
+   "path": "/investigate/trace",
+   "p": [],
+   "body": "GraphRequest",
+   "ret": "GraphResponse"
+  }
+ ],
+ "cases": [
+  {
+   "ts": "create",
+   "http": "POST",
+   "path": "/cases",
+   "p": [],
+   "body": "CreateCaseRequest",
+   "ret": "InvestigationCase"
+  },
+  {
+   "ts": "list",
+   "http": "GET",
+   "path": "/cases",
+   "p": [],
+   "q": [
+    [
+     "status",
+     "str",
+     null
+    ],
+    [
+     "priority",
+     "str",
+     null
+    ],
+    [
+     "page",
+     "int",
+     null
+    ],
+    [
+     "pageSize",
+     "int",
+     null
+    ]
+   ],
+   "ret": "Page[InvestigationCase]"
+  },
+  {
+   "ts": "get",
+   "http": "GET",
+   "path": "/cases/{caseId}",
+   "p": [
+    "caseId"
+   ],
+   "ret": "InvestigationCase"
+  },
+  {
+   "ts": "updateStatus",
+   "http": "PUT",
+   "path": "/cases/{caseId}/status",
+   "p": [
+    "caseId"
+   ],
+   "body": "UpdateCaseStatusRequest",
+   "ret": "InvestigationCase"
+  },
+  {
+   "ts": "addNote",
+   "http": "POST",
+   "path": "/cases/{caseId}/notes",
+   "p": [
+    "caseId"
+   ],
+   "body": "AddNoteRequest",
+   "ret": "CaseNote"
+  },
+  {
+   "ts": "addEvidence",
+   "http": "POST",
+   "path": "/cases/{caseId}/evidence",
+   "p": [
+    "caseId"
+   ],
+   "body": "AddEvidenceRequest",
+   "ret": "CaseEvidence"
+  },
+  {
+   "ts": "escalate",
+   "http": "POST",
+   "path": "/cases/{caseId}/escalate",
+   "p": [
+    "caseId"
+   ],
+   "body": "EscalateCaseRequest",
+   "ret": "InvestigationCase"
+  },
+  {
+   "ts": "getAssignment",
+   "http": "GET",
+   "path": "/cases/{caseId}/assignment",
+   "p": [
+    "caseId"
+   ],
+   "ret": "CaseAssignment"
+  },
+  {
+   "ts": "setAssignee",
+   "http": "PUT",
+   "path": "/cases/{caseId}/assignee",
+   "p": [
+    "caseId"
+   ],
+   "ret": "CaseAssignment",
+   "custom": "set_assignee"
+  },
+  {
+   "ts": "linkEvaluation",
+   "http": "POST",
+   "path": "/cases/{caseId}/evaluations",
+   "p": [
+    "caseId",
+    "evaluationId"
+   ],
+   "ret": "CaseAssignment",
+   "custom": "link_evaluation"
+  }
+ ],
+ "alerts": [
+  {
+   "ts": "get",
+   "http": "GET",
+   "path": "/alerts/{id}",
+   "p": [
+    "id"
+   ],
+   "ret": "AlertDetail"
+  },
+  {
+   "ts": "acknowledge",
+   "http": "POST",
+   "path": "/alerts/{id}/acknowledge",
+   "p": [
+    "id"
+   ],
+   "ret": "AlertDetail",
+   "custom": "ack"
+  }
+ ],
+ "compliance": [
+  {
+   "ts": "checkTravelRule",
+   "http": "POST",
+   "path": "/compliance/travel-rule/check",
+   "p": [],
+   "body": "TravelRuleCheckRequest",
+   "ret": "TravelRuleCheckResult"
+  },
+  {
+   "ts": "buildTravelRulePayload",
+   "http": "POST",
+   "path": "/compliance/travel-rule/payload",
+   "p": [],
+   "body": "TravelRulePayloadRequest",
+   "ret": "TravelRulePayload"
+  },
+  {
+   "ts": "identifyVasp",
+   "http": "GET",
+   "path": "/compliance/travel-rule/vasp/identify/{chain}/{address}",
+   "p": [
+    "chain",
+    "address"
+   ],
+   "ret": "VaspIdentification"
+  },
+  {
+   "ts": "generateDac8Report",
+   "http": "POST",
+   "path": "/compliance/dac8/report",
+   "p": [],
+   "body": "Dac8ReportRequest",
+   "ret": "Dac8ReportResult",
+   "custom": "dac8"
+  }
+ ],
+ "intelligence": [
+  {
+   "ts": "getEntityLabels",
+   "http": "GET",
+   "path": "/intelligence/entity/{chain}/{address}",
+   "p": [
+    "chain",
+    "address"
+   ],
+   "ret": "List[EntityLabel]",
+   "custom": "labels"
+  },
+  {
+   "ts": "getEntityLabel",
+   "http": null,
+   "path": null,
+   "p": [
+    "address",
+    "chain"
+   ],
+   "ret": "EntityLabel",
+   "custom": "label_one"
+  },
+  {
+   "ts": "getVaspInfo",
+   "http": null,
+   "path": null,
+   "p": [
+    "vaspId"
+   ],
+   "ret": "VaspInfo",
+   "custom": "vasp_info"
+  }
+ ],
+ "webhooks": [
+  {
+   "ts": "list",
+   "http": "GET",
+   "path": "/webhooks",
+   "p": [],
+   "ret": "List[WebhookConfig]"
+  },
+  {
+   "ts": "getDeliveries",
+   "http": "GET",
+   "path": "/webhooks/{webhookId}/deliveries",
+   "p": [
+    "webhookId"
+   ],
+   "ret": "List[WebhookDelivery]"
+  }
+ ],
+ "auth": [
+  {
+   "ts": "me",
+   "http": "GET",
+   "path": "/auth/me",
+   "p": [],
+   "ret": "Any"
+  }
+ ],
+ "capabilities": [
+  {
+   "ts": "get",
+   "http": "GET",
+   "path": "/capabilities",
+   "p": [],
+   "ret": "Any"
+  }
+ ],
+ "settings": [
+  {
+   "ts": "getScoreThresholds",
+   "http": "GET",
+   "path": "/settings/score-thresholds",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "getScoreThresholdAudit",
+   "http": "GET",
+   "path": "/settings/score-thresholds/audit",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "getNameMatching",
+   "http": "GET",
+   "path": "/settings/name-matching",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "getNameMatchingAudit",
+   "http": "GET",
+   "path": "/settings/name-matching/audit",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "getNameLists",
+   "http": "GET",
+   "path": "/settings/name-lists",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "getNameListAudit",
+   "http": "GET",
+   "path": "/settings/name-lists/audit",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "listVendorKeys",
+   "http": "GET",
+   "path": "/settings/vendor-keys",
+   "p": [],
+   "ret": "Any"
+  }
+ ],
+ "monitoring": [
+  {
+   "ts": "listWallets",
+   "http": "GET",
+   "path": "/monitoring/wallets",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "addWallet",
+   "http": "POST",
+   "path": "/monitoring/wallets",
+   "p": [],
+   "ret": "Any",
+   "body": "Body"
+  },
+  {
+   "ts": "removeWallet",
+   "http": "DELETE",
+   "path": "/monitoring/wallets/{id}",
+   "p": [
+    "id"
+   ],
+   "ret": "Any"
+  },
+  {
+   "ts": "listNames",
+   "http": "GET",
+   "path": "/monitoring/names",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "addName",
+   "http": "POST",
+   "path": "/monitoring/names",
+   "p": [],
+   "ret": "Any",
+   "body": "Body"
+  },
+  {
+   "ts": "removeName",
+   "http": "DELETE",
+   "path": "/monitoring/names/{id}",
+   "p": [
+    "id"
+   ],
+   "ret": "Any"
+  },
+  {
+   "ts": "getOverview",
+   "http": "GET",
+   "path": "/monitoring/overview",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "listBreaches",
+   "http": "GET",
+   "path": "/monitoring/breaches",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "getBreachSummary",
+   "http": "GET",
+   "path": "/monitoring/breaches/summary",
+   "p": [],
+   "ret": "Any"
+  },
+  {
+   "ts": "acknowledgeBreach",
+   "http": "POST",
+   "path": "/monitoring/breaches/{id}/acknowledge",
+   "p": [
+    "id"
+   ],
+   "ret": "Any"
+  }
+ ]
+}
