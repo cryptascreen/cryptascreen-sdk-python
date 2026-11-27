@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Operation table: SDK method -> HTTP method + path (generated). Checked against the customer API operations by the test-suite."""
 
 from __future__ import annotations

@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """CryptaScreen Python SDK - official client for the CryptaScreen API.
 
 Usage::

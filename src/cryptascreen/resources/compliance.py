@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Compliance resource (mirrors @cryptascreen/sdk compliance endpoints)."""
 
 from __future__ import annotations

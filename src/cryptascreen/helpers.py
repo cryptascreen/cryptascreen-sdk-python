@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Narrowing and display helpers (ports of the helpers exported by @cryptascreen/sdk types)."""
 
 from __future__ import annotations

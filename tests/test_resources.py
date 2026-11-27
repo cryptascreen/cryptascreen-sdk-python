@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Every SDK method hits the (method, path) of the operation table; behaviours of the special methods."""
 
 from __future__ import annotations

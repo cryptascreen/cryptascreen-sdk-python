@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Models of the account, capability, settings and monitoring endpoints.
 
 Responses are lenient (every field optional, unknown fields kept) like the other response models; request models

@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Models of the CryptaScreen API (generated from the @cryptascreen/sdk 0.2.2 types)."""
 
 from __future__ import annotations

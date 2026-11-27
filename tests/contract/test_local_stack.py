@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Contract tests against a LOCAL two-region CryptaScreen stack (never production).
 
 Needs CS_CONTRACT_US / CS_CONTRACT_EU / CS_CONTRACT_KEY_US / CS_CONTRACT_KEY_EU / CS_CONTRACT_KEY_RL; skipped when absent.

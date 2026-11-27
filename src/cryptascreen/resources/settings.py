@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Read access to the tenant settings (resource ``client.settings``)."""
 
 from __future__ import annotations

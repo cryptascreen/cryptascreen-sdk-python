@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Main CryptaScreen SDK client - sync and async."""
 
 from __future__ import annotations

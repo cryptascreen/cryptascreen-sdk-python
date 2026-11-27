@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Wallet / name monitoring and breach detections (resource ``client.monitoring``)."""
 
 from __future__ import annotations

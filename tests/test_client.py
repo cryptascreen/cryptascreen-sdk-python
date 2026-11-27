@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Client construction, headers, errors and the retry policy (same as @cryptascreen/sdk)."""
 
 from __future__ import annotations

@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Bulk screening of a few test addresses: synchronous, then as an asynchronous job."""
 
 import os

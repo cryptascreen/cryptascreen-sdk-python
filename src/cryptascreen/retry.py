@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Retry policy and error mapping (same as @cryptascreen/sdk client.ts).
 
 Retry on 429 (except ``quota_exceeded``) and on any 5xx, up to ``max_retries``. Delay: the ``Retry-After`` header

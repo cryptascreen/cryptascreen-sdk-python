@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """CryptaScreen API types."""
 
 from cryptascreen.types._account import (

@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Webhook verification against the shared cross-SDK vectors (tests/fixtures/webhook_vectors.json)."""
 
 from __future__ import annotations

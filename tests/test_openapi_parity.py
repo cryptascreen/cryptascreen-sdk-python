@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Every SDK method maps to a customer API operation (HTTP method + path) - fails if not.
 
 ``tests/fixtures/customer-operations.json`` lists the operations of the customer API contract (``openapi``) and the

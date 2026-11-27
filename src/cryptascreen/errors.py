@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Typed exceptions for the CryptaScreen SDK (same classes and codes as @cryptascreen/sdk)."""
 
 from __future__ import annotations

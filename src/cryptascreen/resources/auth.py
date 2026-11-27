@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Caller identity (resource ``client.auth``)."""
 
 from __future__ import annotations

@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Behaviour of the account / capabilities / settings / monitoring resources (sync + async) and the webhook read models."""
 
 from __future__ import annotations

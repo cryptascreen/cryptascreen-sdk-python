@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Intelligence resource (mirrors @cryptascreen/sdk intelligence endpoints)."""
 
 from __future__ import annotations

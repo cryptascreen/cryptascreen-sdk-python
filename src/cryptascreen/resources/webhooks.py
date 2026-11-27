@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """Webhooks resource: reading webhook endpoints and their deliveries with an API key.
 
 Registering, deleting and test-sending a webhook endpoint require a signed-in user in the CryptaScreen app; an API key

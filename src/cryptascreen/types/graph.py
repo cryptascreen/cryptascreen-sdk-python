@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026 CryptaCount, Inc.
+# SPDX-License-Identifier: MIT
 """graph types (generated; re-exported from ``cryptascreen.types._models``)."""
 
 from cryptascreen.types._models import (
